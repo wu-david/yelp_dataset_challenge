@@ -1,0 +1,14 @@
+http://www.coachella.com/lineup/
+
+> var anchors = $x("//a[contains(text(), 'Twitter')]");
+> var i;
+> var artistHandles = [];
+> for (i = 0; i < anchors.length; i++) {
+  artistHandles.push(anchors[i].toString().substr(20));
+}
+> var expands = $x("//a[contains(@class, 'artist-expand')]//h3");
+> var j;
+> var artistNames = [];
+> for (j = 0; j < expands.length; j++) {
+  artistNames.push(expands[j].childNodes[1].wholeText.substr(1));
+}
